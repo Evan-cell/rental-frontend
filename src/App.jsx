@@ -1,5 +1,5 @@
-import "./Layout.scss"
-import Navbar from "./components/navbar/Navbar"
+
+
 import Homepage from "./routes/homepage/Homepage"
 import {
   createBrowserRouter,
@@ -8,18 +8,26 @@ import {
   Link,
 } from "react-router-dom";
 import ListPage from "./routes/listPage/ListPage";
+import Layout from "./routes/layout/Layout";
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: 
-      <Homepage/>
+      <Layout/>,
+      children:[
+        {
+          path:"/",
+          element:<Homepage/>
+        },
+        {
+          path:"/list",
+          element:<ListPage/>
+        },
+      ]
     },
-    {
-      path: "/list",
-      element: <ListPage/>,
-    },
+
   ]);
   return (
     // <div className="layout">
