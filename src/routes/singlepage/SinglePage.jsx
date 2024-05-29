@@ -3,8 +3,13 @@ import "./singlepage.scss"
 import ListPage from '../listPage/ListPage'
 function SinglePage() {
   return (
-    <div>
-     <ListPage/>
+    <div className='singlePage'>
+     <div className="details">
+      <div className="wrapper"></div>
+     </div>
+     <div className="features">
+      <div className="wrapper"></div>
+     </div>
     </div>
   )
 }
