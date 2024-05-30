@@ -1,5 +1,7 @@
 import React from 'react'
 import "./ProfilePage.scss"
+import List from '../../components/list/List'
+import Chat from '../../components/chat/Chat'
 
 function ProfilePage() {
   return (
@@ -19,26 +21,26 @@ function ProfilePage() {
               />
             </span>
             <span>
-              Username: <b>John Doe</b>
+              Username: <b>Evan Kimani</b>
             </span>
             <span>
-              E-mail: <b>john@gmail.com</b>
+              E-mail: <b>Evan@gmail.com</b>
             </span>
           </div>
           <div className="title">
             <h1>My List</h1>
             <button>Create New Post</button>
           </div>
-          {/* <List /> */}
+          <List/>
           <div className="title">
             <h1>Saved List</h1>
           </div>
-          {/* <List /> */}
+          <List />
         </div>
       </div>
       <div className="chatContainer">
         <div className="wrapper">
-          {/* <Chat/> */}
+          <Chat />
         </div>
       </div>
     </div>
